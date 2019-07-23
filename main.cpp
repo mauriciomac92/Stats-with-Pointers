@@ -7,9 +7,25 @@
 //
 
 #include <iostream>
+#include "HeaderFunctions.h"
+using namespace std;
 
-int main(int argc, const char * argv[]) {
+
+int main() {
     // insert code here...
-    std::cout << "Hello, World!\n";
+    int numOfStudent;
+    int *MoviesWatched = nullptr;
+    cout << "How many students were surveyed: ";
+    cin >> numOfStudent;
+
+    MoviesWatched = inputNum_MovieWatched(numOfStudent);
+
+for(int i = 1; i <= numOfStudent; i++){
+    cout << "Student #" << i << ": " << MoviesWatched[i-1];
+}
+    int MovieAverage;
+    MovieAverage = findAverage_MovieWatched(MoviesWatched,numOfStudent);
+
+    cout << "The total average is: " << MovieAverage << endl;
     return 0;
 }
