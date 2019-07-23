@@ -27,5 +27,12 @@ for(int i = 1; i <= numOfStudent; i++){
     MovieAverage = findAverage_MovieWatched(MoviesWatched,numOfStudent);
 
     cout << "The total average is: " << MovieAverage << endl;
+
+    int MovieMedian = findMedian_MovieWatched(MoviesWatched, numOfStudent);
+    cout << "The total median is: " << MovieMedian << endl;
+
+    int MovieMode = findMode_MovieWatched(MoviesWatched,numOfStudent);
+    cout << "The total mode is: " << MovieMode << endl;
+    
     return 0;
 }
